@@ -9,6 +9,14 @@
             "email": "b.schneider@goinput.de"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "goinput\\goinputCustomerAccountPanel\\": "src/",
+            "goinput\\goinputCustomerAccountPanel\\models\\": "models/",
+            "goinput\\goinputCustomerAccountPanel\\controllers\\": "controllers/",
+            "goinput\\goinputCustomerAccountPanel\\views\\": "views/"
+        }
+    },
     "minimum-stability": "stable",
     "require": {}
 }
