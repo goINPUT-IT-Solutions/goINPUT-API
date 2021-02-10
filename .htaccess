@@ -1,0 +1,10 @@
+# Begin goINPUT Customer Administration Panel
+<Files "config.php">  
+  Require all denied
+</Files>
+
+<Files "config.sample.php">  
+  Require all denied
+</Files>
+
+# End goINPUT Customer Administration Panel
