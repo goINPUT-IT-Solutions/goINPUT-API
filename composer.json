@@ -18,5 +18,7 @@
         }
     },
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "nilportugues/sql-query-builder": "^1.8"
+    }
 }
