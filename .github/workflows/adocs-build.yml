@@ -16,7 +16,7 @@ jobs:
         id: adocbuild
         uses: tonynv/asciidoctor-action@master
         with:
-          program: "asciidoctor -D documentation --backend=html5 -o index.html -a toc2 documentation/index.adoc"
+          program: "asciidoctor -D build --backend=html5 -o index.html -a toc2 documentation/index.adoc"
 
       - name: Print execution time
         run: echo "Time ${{ steps.adocbuild.outputs.time }}"
@@ -26,4 +26,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_branch: ghpages
-          publish_dir: ./
+          publish_dir: ./build
