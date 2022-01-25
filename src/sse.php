@@ -6,6 +6,8 @@ $loop = React\EventLoop\Factory::create();
 
 $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loop) {
     if ($request->getUri()->getPath() === '/') {
+        $phpinfo = "NULL";
+        
         $html = <<<HTML
 <html>
 <head>
@@ -43,7 +45,9 @@ HTML;
         return new React\Http\Response(
             200,
             [
-                'Content-Type' => 'text/event-stream'
+                'Content-Type' => 'text/event-stream',
+                'Access-Control-Allow-Origin' => '*',
+                'Access-Control-Allow-Headers' => '*'
             ],
             $stream
         );
@@ -54,7 +58,7 @@ HTML;
 
 $http = new React\Http\Server($handler);
 
-$server = new React\Socket\Server(8080, $loop);
+$server = new React\Socket\Server('0.0.0.0:8080', $loop);
 $http->listen($server);
 
 $loop->run();
