@@ -1,4 +1,4 @@
-name: build adocs
+name: Build AsciiDoctor Documentation
 
 on:
   push:
@@ -7,17 +7,20 @@ on:
 jobs:
   adoc_build:
     runs-on: ubuntu-18.04
-    name: asciidoctor -D documentation --backend=html5 -o index.html -a toc2 documentation/index.adoc
+    name: Run AsciiDcotor
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Get build container
         id: adocbuild
         uses: tonynv/asciidoctor-action@master
         with:
           program: "asciidoctor -D documentation --backend=html5 -o index.html -a toc2 documentation/index.adoc"
+
       - name: Print execution time
         run: echo "Time ${{ steps.adocbuild.outputs.time }}"
+
 #      - name: Deploy docs to ghpages
 #        uses: peaceiris/actions-gh-pages@v3
 #        with:
