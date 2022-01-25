@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $loop = React\EventLoop\Factory::create();
 
@@ -17,7 +17,7 @@ live.addEventListener("message", function (message) {
 </script>
 </head>
 <body style="background-color:#ddd;">
-hello world
+Hello World at
 </body>
 </html>
 HTML;
@@ -37,7 +37,7 @@ HTML;
         });
 
         $loop->addPeriodicTimer(1.0, function () use ($stream) {
-            $stream->write(microtime(true) . " hello world");
+            $stream->write(microtime(true) . "<br>Hello World at ");
         });
 
         return new React\Http\Response(
