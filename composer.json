@@ -1,0 +1,24 @@
+{
+  "name": "goinput/cap",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Benjamin Schneider",
+      "email": "b.schneider@goinput.de"
+    },
+    {
+      "name": "Elias Wolfhard",
+      "email": "e.wolfhard@goinput.de"
+    }
+  ],
+  "require": {
+    "react/event-loop": "^0.5.1",
+    "react/stream": "^0.7.7",
+    "react/socket": "^0.8.10",
+    "clue/buzz-react": "^2.3",
+    "clue/packagist-api-react": "^1.2",
+    "react/http": "^0.8.3"
+  }
+}
