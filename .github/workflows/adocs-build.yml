@@ -1,0 +1,29 @@
+name: Build AsciiDoctor Documentation
+
+on:
+  push:
+    branches:
+      - documentation
+jobs:
+  adoc_build:
+    runs-on: ubuntu-18.04
+    name: Run AsciiDcotor
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '1'
+          ref: 'documentation'
+
+      - name: Get build container
+        id: adocbuild
+        uses: tonynv/asciidoctor-action@master
+        with:
+          program: "asciidoctor -D build --backend=html5 -o index.html index.adoc"
+
+      - name: Deploy docs to ghpages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: ghpages
+          publish_dir: ./build
