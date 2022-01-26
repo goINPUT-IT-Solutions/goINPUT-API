@@ -1,6 +1,6 @@
-## 2.0 Sample CAP Data Types
+== 2.0 Sample CAP Data Types
 
-### Customer
+=== Customer
 - id: Integer
 - customerNumber: String
 - userName: String
@@ -12,13 +12,13 @@
 - bookedContracts: Object
 - billingState: Object
 
-#' Account
+=== Account
 - id: Integer
 - userName: String
 - passwordHash: String
 - customerNumber: String
 
-### Domain
+=== Domain
 - id: Integer
 - domainName: String
 - tempDomainName: String
@@ -31,7 +31,7 @@
 - accountId: Integer
 - customerNumber: String
 
-### Email
+=== Email
 - id: Integer
 - domainName: String
 - accountName: String
@@ -39,7 +39,7 @@
 - accountId: Integer
 - customerNumber: String
 
-### EmailRedirect
+=== EmailRedirect
 - id: Integer
 - domainName: String
 - accountName: String
@@ -47,7 +47,7 @@
 - accountId: Integer
 - customerNumber: String
 
-### FTPUser
+=== FTPUser
 - id: Integer
 - userName: String
 - passwordHash: String
@@ -58,17 +58,18 @@
 - accountId: Integer
 - customerNumber: String
 
-### DatabaseUser
+=== DatabaseUser
 - id: Integer
 - userName: String
 - hostName: String
 - accountId: Integer
 - customerNumber: String
 
-### Database
+=== Database
 - id: Integer
 - type: string
 - databaseName: String
 - databaseUsers: String
 - accountId: Integer
 - size: Integer // Needs manually checking. Stupid mysql.
+

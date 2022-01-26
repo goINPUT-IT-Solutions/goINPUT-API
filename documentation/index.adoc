@@ -1,6 +1,9 @@
 = goINPUT Customer Account Panel (CAP)
 goINPUT IT Solutions <kontakt@goinput.de>
+:description: goINPUT Customer Account Panel documentation
+:sectanchors:
+:url-repo: https://github.com/goINPUT-IT-Solutions/CustomerAdministrationPanel
+:doctype: book
 
 include::api.adoc[]
 include::datatypes.adoc[]
-
