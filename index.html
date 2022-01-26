@@ -448,6 +448,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_first_section">First Section</a></li>
+<li><a href="#_cap_data_types">CAP Data Types</a>
+<ul class="sectlevel1">
+<li><a href="#_customer">Customer</a></li>
+<li><a href="#_account">Account</a></li>
+<li><a href="#_domain">Domain</a></li>
+<li><a href="#_email">Email</a></li>
+<li><a href="#_emailredirect">EmailRedirect</a></li>
+<li><a href="#_ftpuser">FTPUser</a></li>
+<li><a href="#_databaseuser">DatabaseUser</a></li>
+<li><a href="#_database">Database</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -479,10 +491,254 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<h1 id="_cap_data_types" class="sect0">CAP Data Types</h1>
+<div class="sect1">
+<h2 id="_customer">Customer</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+<li>
+<p>userName: String</p>
+</li>
+<li>
+<p>passwordHash: String</p>
+</li>
+<li>
+<p>emailAdress: String</p>
+</li>
+<li>
+<p>customerAddresses: Object</p>
+</li>
+<li>
+<p>bankAccounts: Object</p>
+</li>
+<li>
+<p>orderProcessingContract: Boolean</p>
+</li>
+<li>
+<p>bookedContracts: Object</p>
+</li>
+<li>
+<p>billingState: Object</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_account">Account</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>userName: String</p>
+</li>
+<li>
+<p>passwordHash: String</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_domain">Domain</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>domainName: String</p>
+</li>
+<li>
+<p>tempDomainName: String</p>
+</li>
+<li>
+<p>Type: Integer</p>
+</li>
+<li>
+<p>path: String</p>
+</li>
+<li>
+<p>sslState: Array</p>
+</li>
+<li>
+<p>phpVersion: String</p>
+</li>
+<li>
+<p>isActive: Boolean</p>
+</li>
+<li>
+<p>DKIMSign: Boolean</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_email">Email</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>domainName: String</p>
+</li>
+<li>
+<p>accountName: String</p>
+</li>
+<li>
+<p>mailboxSize: Integer</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emailredirect">EmailRedirect</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>domainName: String</p>
+</li>
+<li>
+<p>accountName: String</p>
+</li>
+<li>
+<p>target: String</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ftpuser">FTPUser</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>userName: String</p>
+</li>
+<li>
+<p>passwordHash: String</p>
+</li>
+<li>
+<p>path: String</p>
+</li>
+<li>
+<p>domainName: String</p>
+</li>
+<li>
+<p>permissions: String</p>
+</li>
+<li>
+<p>virusScan: Boolean</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_databaseuser">DatabaseUser</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>userName: String</p>
+</li>
+<li>
+<p>hostName: String</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_database">Database</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>type: string</p>
+</li>
+<li>
+<p>databaseName: String</p>
+</li>
+<li>
+<p>databaseUsers: String</p>
+</li>
+<li>
+<p>accountId: Integer</p>
+</li>
+<li>
+<p>size: Integer // Needs manually checking. Stupid mysql.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-26 00:08:18 UTC
+Last updated 2022-01-26 03:51:45 UTC
 </div>
 </div>
 </body>
