@@ -16,7 +16,7 @@ jobs:
         id: adocbuild
         uses: tonynv/asciidoctor-action@master
         with:
-          program: "asciidoctor -D build --backend=html5 -o index.html -a toc5 documentation/index.adoc"
+          program: "asciidoctor -D build --backend=html5 -o index.html documentation/index.adoc"
 
       - name: Deploy docs to ghpages
         uses: peaceiris/actions-gh-pages@v3

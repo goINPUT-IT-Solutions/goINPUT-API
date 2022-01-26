@@ -3,6 +3,7 @@ goINPUT IT Solutions <kontakt@goinput.de>
 :description: goINPUT Customer Account Panel documentation
 :sectanchors:
 :url-repo: https://github.com/goINPUT-IT-Solutions/CustomerAdministrationPanel
+:toc: left
 :toclevels: 5
 
 include::api.adoc[]
