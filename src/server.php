@@ -1,35 +1,28 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config.php';
+
+global $config;
 
 $loop = React\EventLoop\Factory::create();
 
 $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loop) {
     if ($request->getUri()->getPath() === '/') {
-        $phpinfo = "NULL";
         
-        $html = <<<HTML
-<html>
-<head>
-<script>
-var live = new EventSource("/live");
-live.addEventListener("message", function (message) {
-    document.body.innerHTML += message.data;
-});
-</script>
-</head>
-<body style="background-color:#ddd;">
-Hello World at
-</body>
-</html>
-HTML;
+        $json = json_encode(array(
+            "API" => array(
+                "Version" => "0.1",
+            ),
+            "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
+        ));
 
         return new React\Http\Response(
             200,
             [
-                'Content-Type' => 'text/html'
+                'Content-Type' => 'application/json'
             ],
-            $html
+            $json
         );
     }
 
@@ -58,7 +51,7 @@ HTML;
 
 $http = new React\Http\Server($handler);
 
-$server = new React\Socket\Server('0.0.0.0:8080', $loop);
+$server = new React\Socket\Server($config['externalIP'] . ':' . $config['externalPort'], $loop);
 $http->listen($server);
 
 $loop->run();

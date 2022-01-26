@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-php ./src/sse.php
+php ./src/server.php

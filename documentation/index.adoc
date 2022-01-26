@@ -1,19 +1,47 @@
-= Hello, AsciiDoc!
-Benjamin Schneider <b.schneider@goinput.de>
+# goINPUT Customer Account Panel (CAP)
 
-An introduction to http://asciidoc.org[AsciiDoc].
+## Table Of Content
+:toc:
 
-== First Section
+### 1.0 (Experimental) API
+#### 1.1 Overview
 
-* item 1
-* item 2
+##### 1.1.1 Introduction
+The CAP API operates over HTTPS and uses JSON as its data format. The API is a RESTful API and utilizes HTTP methods and HTTP status codes to specify requests and responses.
 
-[source,ruby]
-puts "Hello, World!"
+##### 1.1.2 Getting Started
+WIP
 
-# CAP Data Types
+##### 1.1.3 Authentication
+WIP
 
-## Customer
+##### 1.1.4 Errors
+WIP
+
+##### 1.1.5 Rate Limiting
+WIP
+
+#### 1.1 Users
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+##### 1.1.1 Get all users
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+##### 1.1.2 Create a user
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+##### 1.1.3 Delete a user
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+##### 1.1.4 Get a user
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+##### 1.1.5 Update a user
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+### 2.0 Sample CAP Data Types
+
+#### Customer
 - id: Integer
 - customerNumber: String
 - userName: String
@@ -25,13 +53,13 @@ puts "Hello, World!"
 - bookedContracts: Object
 - billingState: Object
 
-## Account
+#### Account
 - id: Integer
 - userName: String
 - passwordHash: String
 - customerNumber: String
 
-## Domain
+#### Domain
 - id: Integer
 - domainName: String
 - tempDomainName: String
@@ -44,7 +72,7 @@ puts "Hello, World!"
 - accountId: Integer
 - customerNumber: String
 
-## Email
+#### Email
 - id: Integer
 - domainName: String
 - accountName: String
@@ -52,7 +80,7 @@ puts "Hello, World!"
 - accountId: Integer
 - customerNumber: String
 
-## EmailRedirect
+#### EmailRedirect
 - id: Integer
 - domainName: String
 - accountName: String
@@ -60,7 +88,7 @@ puts "Hello, World!"
 - accountId: Integer
 - customerNumber: String
 
-## FTPUser
+#### FTPUser
 - id: Integer
 - userName: String
 - passwordHash: String
@@ -71,14 +99,14 @@ puts "Hello, World!"
 - accountId: Integer
 - customerNumber: String
 
-## DatabaseUser
+#### DatabaseUser
 - id: Integer
 - userName: String
 - hostName: String
 - accountId: Integer
 - customerNumber: String
 
-## Database
+#### Database
 - id: Integer
 - type: string
 - databaseName: String
