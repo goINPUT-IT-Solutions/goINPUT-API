@@ -1,0 +1,13 @@
+[Unit]
+Description=gpINPUT Customer Account Panel Service
+After=network.target
+
+[Service]
+Type=simple
+User=cap
+WorkingDirectory=/opt/cap
+ExecStart=/usr/bin/php /opt/cap/src/sse.php
+Restart=on-failure # or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
