@@ -1,7 +1,7 @@
 = goINPUT Customer Account Panel (CAP)
 goINPUT IT Solutions <kontakt@goinput.de>
 
-:toc:
+include:api.adoc[]
 
 ## 2.0 Sample CAP Data Types
 
