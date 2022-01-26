@@ -1,5 +1,5 @@
 = Hello, AsciiDoc!
-Doc Writer <doc@example.com>
+Benjamin Schneider <b.schneider@goinput.de>
 
 An introduction to http://asciidoc.org[AsciiDoc].
 
