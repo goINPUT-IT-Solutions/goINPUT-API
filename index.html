@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="description" content="goINPUT Customer Account Panel documentation">
 <meta name="author" content="goINPUT IT Solutions">
 <title>goINPUT Customer Account Panel (CAP)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -437,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article toc2 toc-left">
+<body class="book toc2 toc-left">
 <div id="header">
 <h1>goINPUT Customer Account Panel (CAP)</h1>
 <div class="details">
@@ -450,12 +451,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_1_0_experimental_api">1.0 (Experimental) API</a>
 <ul class="sectlevel2">
 <li><a href="#_1_1_overview">1.1 Overview</a></li>
-<li><a href="#_1_1_users">1.1 Users</a></li>
 </ul>
 </li>
 <li><a href="#_2_0_sample_cap_data_types">2.0 Sample CAP Data Types</a>
 <ul class="sectlevel2">
 <li><a href="#_customer">Customer</a></li>
+<li><a href="#_account">Account</a></li>
 <li><a href="#_domain">Domain</a></li>
 <li><a href="#_email">Email</a></li>
 <li><a href="#_emailredirect">EmailRedirect</a></li>
@@ -469,72 +470,72 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_1_0_experimental_api">1.0 (Experimental) API</h2>
+<h2 id="_1_0_experimental_api"><a class="anchor" href="#_1_0_experimental_api"></a>1.0 (Experimental) API</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_1_1_overview">1.1 Overview</h3>
+<h3 id="_1_1_overview"><a class="anchor" href="#_1_1_overview"></a>1.1 Overview</h3>
 <div class="sect3">
-<h4 id="_1_1_1_introduction">1.1.1 Introduction</h4>
+<h4 id="_1_1_1_introduction"><a class="anchor" href="#_1_1_1_introduction"></a>1.1.1 Introduction</h4>
 <div class="paragraph">
 <p>The CAP API operates over HTTPS and uses JSON as its data format. The API is a RESTful API and utilizes HTTP methods and HTTP status codes to specify requests and responses.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_2_getting_started">1.1.2 Getting Started</h4>
+<h4 id="_1_1_2_getting_started"><a class="anchor" href="#_1_1_2_getting_started"></a>1.1.2 Getting Started</h4>
 <div class="paragraph">
 <p>WIP</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_3_authentication">1.1.3 Authentication</h4>
+<h4 id="_1_1_3_authentication"><a class="anchor" href="#_1_1_3_authentication"></a>1.1.3 Authentication</h4>
 <div class="paragraph">
 <p>WIP</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_4_errors">1.1.4 Errors</h4>
+<h4 id="_1_1_4_errors"><a class="anchor" href="#_1_1_4_errors"></a>1.1.4 Errors</h4>
 <div class="paragraph">
 <p>WIP</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_5_rate_limiting">1.1.5 Rate Limiting</h4>
+<h4 id="_1_1_5_rate_limiting"><a class="anchor" href="#_1_1_5_rate_limiting"></a>1.1.5 Rate Limiting</h4>
 <div class="paragraph">
 <p>WIP</p>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_1_1_users">1.1 Users</h3>
-<div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-</div>
 <div class="sect3">
-<h4 id="_1_1_1_get_all_users">1.1.1 Get all users</h4>
+<h4 id="_1_1_users"><a class="anchor" href="#_1_1_users"></a>1.1 Users</h4>
 <div class="paragraph">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_2_create_a_user">1.1.2 Create a user</h4>
+<h4 id="_1_1_1_get_all_users"><a class="anchor" href="#_1_1_1_get_all_users"></a>1.1.1 Get all users</h4>
 <div class="paragraph">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_3_delete_a_user">1.1.3 Delete a user</h4>
+<h4 id="_1_1_2_create_a_user"><a class="anchor" href="#_1_1_2_create_a_user"></a>1.1.2 Create a user</h4>
 <div class="paragraph">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_4_get_a_user">1.1.4 Get a user</h4>
+<h4 id="_1_1_3_delete_a_user"><a class="anchor" href="#_1_1_3_delete_a_user"></a>1.1.3 Delete a user</h4>
 <div class="paragraph">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_1_5_update_a_user">1.1.5 Update a user</h4>
+<h4 id="_1_1_4_get_a_user"><a class="anchor" href="#_1_1_4_get_a_user"></a>1.1.4 Get a user</h4>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_1_5_update_a_user"><a class="anchor" href="#_1_1_5_update_a_user"></a>1.1.5 Update a user</h4>
 <div class="paragraph">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 </div>
@@ -543,10 +544,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_0_sample_cap_data_types">2.0 Sample CAP Data Types</h2>
+<h2 id="_2_0_sample_cap_data_types"><a class="anchor" href="#_2_0_sample_cap_data_types"></a>2.0 Sample CAP Data Types</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_customer">Customer</h3>
+<h3 id="_customer"><a class="anchor" href="#_customer"></a>Customer</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -581,16 +582,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>#' Account
-- id: Integer
-- userName: String
-- passwordHash: String
-- customerNumber: String</p>
+</div>
+<div class="sect2">
+<h3 id="_account"><a class="anchor" href="#_account"></a>Account</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>id: Integer</p>
+</li>
+<li>
+<p>userName: String</p>
+</li>
+<li>
+<p>passwordHash: String</p>
+</li>
+<li>
+<p>customerNumber: String</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain">Domain</h3>
+<h3 id="_domain"><a class="anchor" href="#_domain"></a>Domain</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -630,7 +643,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_email">Email</h3>
+<h3 id="_email"><a class="anchor" href="#_email"></a>Email</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -655,7 +668,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_emailredirect">EmailRedirect</h3>
+<h3 id="_emailredirect"><a class="anchor" href="#_emailredirect"></a>EmailRedirect</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -680,7 +693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ftpuser">FTPUser</h3>
+<h3 id="_ftpuser"><a class="anchor" href="#_ftpuser"></a>FTPUser</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -714,7 +727,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_databaseuser">DatabaseUser</h3>
+<h3 id="_databaseuser"><a class="anchor" href="#_databaseuser"></a>DatabaseUser</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -736,7 +749,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_database">Database</h3>
+<h3 id="_database"><a class="anchor" href="#_database"></a>Database</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -765,7 +778,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-26 21:00:04 UTC
+Last updated 2022-01-26 21:09:13 UTC
 </div>
 </div>
 </body>
