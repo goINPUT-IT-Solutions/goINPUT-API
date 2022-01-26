@@ -18,9 +18,6 @@ jobs:
         with:
           program: "asciidoctor -D build --backend=html5 -o index.html -a toc2 documentation/index.adoc"
 
-      - name: Print execution time
-        run: echo "Time ${{ steps.adocbuild.outputs.time }}"
-
       - name: Deploy docs to ghpages
         uses: peaceiris/actions-gh-pages@v3
         with:
