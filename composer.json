@@ -13,6 +13,11 @@
       "email": "e.wolfhard@goinput.de"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "goINPUT\\CAP\\": "src/"
+    }
+  },
   "require": {
     "react/event-loop": "^0.5.1",
     "react/stream": "^0.7.7",
@@ -20,5 +25,8 @@
     "clue/buzz-react": "^2.3",
     "clue/packagist-api-react": "^1.2",
     "react/http": "^0.8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.5"
   }
 }

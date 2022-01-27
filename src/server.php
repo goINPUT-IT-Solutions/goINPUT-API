@@ -8,25 +8,26 @@ global $config;
 $loop = React\EventLoop\Factory::create();
 
 $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loop) {
-    if ($request->getUri()->getPath() === '/') {
+    
+    # ROOT Endpoint
+    if ($request->getUri()->getPath() === '/api/1.0') {
         
-        $json = json_encode(array(
-            "API" => array(
-                "Version" => "0.1",
-            ),
-            "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
-        ));
-
-        return new React\Http\Response(
-            200,
-            [
-                'Content-Type' => 'application/json'
-            ],
-            $json
-        );
+        $endpoint = new \goINPUT\CAP\Endpoints\RootEndpoint($request);
+        return $endpoint->sendResponse();
+        
     }
+    
+    # Users Endpoint
+    if ($request->getUri()->getPath() === '/api/1.0/users') {
+        
+        $endpoint = new \goINPUT\CAP\Endpoints\UsersEndpoint($request);
+        return $endpoint->sendResponse();
+        
+    }
+    
+    
 
-    if ($request->getUri()->getPath() === '/live') {
+    if ($request->getUri()->getPath() === '/api/1.0/live') {
         $stream = new React\Stream\ThroughStream(function ($data) {
             return 'data: ' . $data . "\n\n";
         });
