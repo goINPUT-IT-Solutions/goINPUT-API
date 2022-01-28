@@ -12,9 +12,11 @@
  *  Copyright (c) goINPUT IT Solutions 2022.
  */
 
-namespace goINPUT\CAP\Endpoints;
+namespace goINPUT\CAP\Endpoints\v1_0;
 
-class UsersEndpoint extends Endpoint
+use goINPUT\CAP\Endpoints\Endpoint;
+
+class DNSEndpoint extends Endpoint
 {
     
 }

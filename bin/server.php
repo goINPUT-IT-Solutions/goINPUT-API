@@ -10,13 +10,29 @@ $loop = React\EventLoop\Factory::create();
 $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loop) {
     global $config;
     
-    # ROOT Endpoint
-    if ($request->getUri()->getPath() === '/api/1.0')
-        return (new \goINPUT\CAP\Endpoints\RootEndpoint($request))->sendResponse();
-    
-    # Users Endpoint
-    if ($request->getUri()->getPath() === '/api/1.0/users')
-        return (new \goINPUT\CAP\Endpoints\UsersEndpoint($request))->sendResponse();
+    $tmpArray = explode("/", $request->getUri()->getPath());
+    if($tmpArray[1] == 'api') {
+        if ($tmpArray[2] == '1.0') {
+            if(!empty($tmpArray[3])) {
+                $className = "\\goINPUT\\CAP\\Endpoints\\v1_0\\" . $tmpArray[3] . "Endpoint";
+                
+                if(class_exists($className)) {
+                    $newClass = new $className($request);
+                    return $newClass->sendResponse();
+                }
+                return (new \goINPUT\CAP\Endpoints\v1_0\UndefinedEndpoint($request))->sendResponse();
+            }
+            return (new \goINPUT\CAP\Endpoints\v1_0\RootEndpoint($request))->sendResponse();
+        } elseif (empty($tmpArray[3]))
+            return (new \goINPUT\CAP\Endpoints\APIListEndpoint($request))->sendResponse();
+    } else {
+        return new React\Http\Response(
+            302,
+            [
+                'Location' => 'https://goinput-it-solutions.github.io/CustomerAdministrationPanel/'
+            ]
+        );
+    }
         
 
     if ($request->getUri()->getPath() === '/api/1.0/live') {
@@ -39,7 +55,7 @@ $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loo
         );
     }
     
-    return (new \goINPUT\CAP\Endpoints\UndefinedEndpoint($request))->sendResponse();
+    return (new \goINPUT\CAP\Endpoints\UndefinedAPIEndpoint($request))->sendResponse();
 };
 
 $http = new React\Http\Server($handler);
