@@ -14,6 +14,8 @@
 
 namespace goINPUT\CAP;
 
+require_once __DIR__ . '/../config.php';
+
 class Logging
 {
     

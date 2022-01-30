@@ -14,6 +14,8 @@
 
 namespace goINPUT\CAP\Endpoints;
 
+require_once __DIR__ . '/../../config.php';
+
 class APIListEndpoint extends BasicEndpoint
 {
     

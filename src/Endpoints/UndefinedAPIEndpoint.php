@@ -14,6 +14,8 @@
 
 namespace goINPUT\CAP\Endpoints;
 
+require_once __DIR__ . '/../../config.php';
+
 use Psr\Http\Message\ServerRequestInterface;
 
 class UndefinedAPIEndpoint extends BasicEndpoint

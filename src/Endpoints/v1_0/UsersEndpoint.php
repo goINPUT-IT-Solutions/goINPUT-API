@@ -14,6 +14,8 @@
 
 namespace goINPUT\CAP\Endpoints\v1_0;
 
+require_once __DIR__ . '/../../../config.php';
+
 use Psr\Http\Message\ServerRequestInterface;
 
 class UsersEndpoint extends Endpoint

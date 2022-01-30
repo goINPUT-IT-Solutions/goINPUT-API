@@ -8,6 +8,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Copy config.php
+        run: |
+        cp "config.sample.php" "config.php"
+        done
+
       - uses: php-actions/composer@v6 # or alternative dependency management
       - uses: php-actions/phpstan@v3
         with:
