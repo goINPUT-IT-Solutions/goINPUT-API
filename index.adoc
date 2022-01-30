@@ -1,4 +1,4 @@
-= goINPUT Customer Account Panel (CAP)
+= goINPUT API
 goINPUT IT Solutions <kontakt@goinput.de>
 :description: goINPUT Customer Account Panel documentation
 :sectanchors:
