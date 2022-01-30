@@ -23,7 +23,7 @@ class RootEndpoint extends Endpoint
         global $config;
         
         parent::__construct($request);
-    
+        
         $json = json_encode(array(
             "API" => array(
                 "Version" => $config['apiVersion'],

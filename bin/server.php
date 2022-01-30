@@ -10,38 +10,34 @@ $loop = React\EventLoop\Factory::create();
 $handler = function (Psr\Http\Message\ServerRequestInterface $request) use ($loop) {
     global $config;
     
-    if( $config['logs']['accessLogs'] == true) {
+    if ($config['logs']['accessLogs'] == true) {
         $msgLog = date('Y-m-d H:i:s') . ' ' . $request->getMethod() . ' ' . $request->getUri() . PHP_EOL;
         
         echo $msgLog;
         
-        if( $config['logs']['logToFile'] == true) {
-            if( !file_exists( BASEDIR . '/logs' ) )
+        if ($config['logs']['logToFile'] == true) {
+            if (!file_exists(BASEDIR . '/logs'))
                 mkdir(BASEDIR . "/logs");
-    
+            
             file_put_contents(BASEDIR . "/logs/access.log", $msgLog, FILE_APPEND);
         }
     }
     
     $tmpArray = explode("/", $request->getUri()->getPath());
-    if($tmpArray[1] == 'api') {
+    if ($tmpArray[1] == 'api') {
         
-        if ($tmpArray[2] == '1.0')
-        {
-            if(!empty($tmpArray[3])) {
+        if ($tmpArray[2] == '1.0') {
+            if (!empty($tmpArray[3])) {
                 $className = "\\goINPUT\\CAP\\Endpoints\\v1_0\\" . $tmpArray[3] . "Endpoint";
                 
-                if(class_exists($className)) {
+                if (class_exists($className)) {
                     $newClass = new $className($request);
                     return $newClass->sendResponse();
                 }
                 return (new \goINPUT\CAP\Endpoints\v1_0\UndefinedEndpoint($request))->sendResponse();
             }
             return (new \goINPUT\CAP\Endpoints\v1_0\RootEndpoint($request))->sendResponse();
-        }
-        
-        elseif (empty($tmpArray[2]) && sizeof($tmpArray) <= 3)
-        {
+        } elseif (empty($tmpArray[2]) && sizeof($tmpArray) <= 3) {
             return (new \goINPUT\CAP\Endpoints\APIListEndpoint($request))->sendResponse();
         }
         
@@ -65,7 +61,7 @@ $http->listen($server);
 // ---------------------------------------------------------------- \\
 // ---------------------------------------------------------------- \\
 
-echo "goINPUT API-Server „". $config["serverName"] ."“ v" . $config["serverVersion"] . PHP_EOL;
+echo "goINPUT API-Server „" . $config["serverName"] . "“ v" . $config["serverVersion"] . PHP_EOL;
 echo "Listening on " . str_replace('tcp:', 'http:', $server->getAddress()) . PHP_EOL;
 echo "----------------------------------------------------------------" . PHP_EOL;
 $loop->run();

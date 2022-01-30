@@ -25,6 +25,21 @@ class BasicEndpoint
     private string $__jsonData = "";
     private string $__responseType = "application/json";
     
+    public function __construct(ServerRequestInterface $request)
+    {
+        global $config;
+        $this->setRequest($request);
+        
+        $this->setJsonData(json_encode(array(
+            "API" => array(
+                "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
+            )
+        )));
+        
+        $this->setStatusCode(200);
+        $this->setResponseData($this->getJsonData());
+    }
+    
     /**
      * @return string
      */
@@ -104,7 +119,7 @@ class BasicEndpoint
     /**
      * @return ServerRequestInterface
      */
-    public function getRequest() :ServerRequestInterface
+    public function getRequest(): ServerRequestInterface
     {
         return $this->__request;
     }
@@ -113,26 +128,13 @@ class BasicEndpoint
      * @param mixed $_request
      * @return void
      */
-    public function setRequest(ServerRequestInterface $_request) :void
+    public function setRequest(ServerRequestInterface $_request): void
     {
         $this->__request = $_request;
     }
     
-    public function __construct(ServerRequestInterface $request) {
-        global $config;
-        $this->setRequest($request);
-        
-        $this->setJsonData(json_encode(array(
-            "API" => array(
-                "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
-            )
-        )));
-        
-        $this->setStatusCode(200);
-        $this->setResponseData($this->getJsonData());
-    }
-    
-    public function sendResponse() :\React\Http\Response {
+    public function sendResponse(): \React\Http\Response
+    {
         global $config;
         
         return new \React\Http\Response(
@@ -141,7 +143,7 @@ class BasicEndpoint
                 'Content-Type' => 'application/json',
                 'Access-Control-Allow-Origin' => $config['ACAO'],
                 'Access-Control-Allow-Headers' => $config['ACAH'],
-                'X-Powered-By' => 'goINPUT API v'.$config["apiVersion"],
+                'X-Powered-By' => 'goINPUT API v' . $config["apiVersion"],
                 'Server' => 'Hayward'
             ],
             $this->getResponseData()

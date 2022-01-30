@@ -30,7 +30,7 @@ class UndefinedEndpoint extends Endpoint
                 "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
             ),
             "Error" => 'Endpoint is not defined.'
-            
+        
         ));
         
         $this->setStatusCode(404);

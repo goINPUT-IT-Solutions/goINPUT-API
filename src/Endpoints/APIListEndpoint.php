@@ -29,24 +29,24 @@ class APIListEndpoint extends BasicEndpoint
         
         $json['APIs'] = [];
         
-        foreach($apiVersions as $api) {
-            if( !str_ends_with($api, '.php') ) {
+        foreach ($apiVersions as $api) {
+            if (!str_ends_with($api, '.php')) {
                 
                 $apiEndpoints = scandir(BASEDIR . "/src/Endpoints/$api");
                 $apiEndpoints = array_diff($apiEndpoints, array('.', '..'));
-    
+                
                 $apiName = str_replace("v", "", $api);
                 $apiName = str_replace("_", ".", $apiName);
-    
+                
                 $json['APIs'][$apiName] = null;
-    
+                
                 foreach ($apiEndpoints as $apiEndpoint) {
-                    if($apiEndpoint == "Endpoint.php")
+                    if ($apiEndpoint == "Endpoint.php")
                         continue;
                     
                     $endpoint = mb_strtolower(mb_substr($apiEndpoint, 0, -12));
                     
-                    if($endpoint == "undefined" or
+                    if ($endpoint == "undefined" or
                         $endpoint == "root")
                         continue;
                     

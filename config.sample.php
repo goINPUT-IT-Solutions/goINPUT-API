@@ -16,7 +16,7 @@ const BASEDIR = __DIR__;
 
 $config = array(
     'serverVersion' => '1.0',
-    'serverName'    => 'Hayward',
+    'serverName' => 'Hayward',
     'apiVersion' => '1.0',
     'externalIP' => '0.0.0.0',
     'externalPort' => '8080',
@@ -29,10 +29,10 @@ $config = array(
     ),
     
     'database' => array(
-        'host'          => 'odin.goitservers.com',
-        'user'          => 'cap',
-        'db'            => 'cap',
-        'password'      => ''
+        'host' => 'odin.goitservers.com',
+        'user' => 'cap',
+        'db' => 'cap',
+        'password' => ''
     )
 );
 

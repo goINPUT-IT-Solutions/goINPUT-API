@@ -21,11 +21,11 @@ $connector = new React\Socket\Connector($loop);
 for ($i = 0; $i < 10; ++$i) {
     $connector->connect('www.google.com:80')->then(function (React\Socket\ConnectionInterface $http) {
         $http->write("GET / HTTP/v1_0\r\n\r\n");
-
+        
         $http->on('data', function ($data) {
             echo $data;
         });
-
+        
         $http->on('close', function () {
             echo 'CLOSED';
         });
