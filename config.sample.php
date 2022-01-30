@@ -26,6 +26,13 @@ $config = array(
     'logs' => array(
         'accessLogs' => true,
         'logToFile' => true
+    ),
+    
+    'database' => array(
+        'host'          => 'odin.goitservers.com',
+        'user'          => 'cap',
+        'db'            => 'cap',
+        'password'      => ''
     )
 );
 
