@@ -1,3 +1,3 @@
-# CustomerAdministrationPanel
+# goINPUT API
 
-goINPUT's Customer Account Panel (Short: CAP)
+README is WIP.

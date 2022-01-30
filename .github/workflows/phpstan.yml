@@ -14,11 +14,9 @@ jobs:
         run: cp "config.sample.php" "config.php"
 
       - name: Run composer
-        uses: php-actions/composer@v6 # or alternative dependency management
+        uses: php-actions/composer@v6
 
       - name: Run phpstan
         uses: php-actions/phpstan@v3
         with:
           path: src/
-
-    # ... then your own project steps ...
