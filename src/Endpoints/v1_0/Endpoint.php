@@ -12,12 +12,12 @@
  *  Copyright (c) goINPUT IT Solutions 2022.
  */
 
-namespace goINPUT\CAP\Endpoints;
+namespace goINPUT\CAP\Endpoints\v1_0;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-require __DIR__ . '/../../vendor/autoload.php';
-require __DIR__ . '/../../config.php';
+require_once BASEDIR . '/vendor/autoload.php';
+require_once BASEDIR . '/config.php';
 
 class Endpoint
 {
@@ -124,14 +124,14 @@ class Endpoint
     public function __construct(ServerRequestInterface $request) {
         global $config;
         $this->setRequest($request);
-    
+        
         $this->setJsonData(json_encode(array(
             "API" => array(
                 "Version" => $config['apiVersion'],
                 "Copyright" => "Copyright © 2019 - 2022 Schneider, Benjamin & Wolfhard, Elias GbR"
             )
         )));
-    
+        
         $this->setStatusCode(200);
         $this->setResponseData($this->getJsonData());
     }

@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-User=cap
-WorkingDirectory=/opt/cap
-ExecStart=/usr/bin/php /opt/cap/src/server.php
-Restart=on-failure # or always, on-abort, etc
+User=root
+WorkingDirectory=/opt/cap_api
+ExecStart=/usr/bin/php8.1 /opt/cap/bin/server.php
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target

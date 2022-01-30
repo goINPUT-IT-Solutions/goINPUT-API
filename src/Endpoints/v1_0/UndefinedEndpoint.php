@@ -14,7 +14,6 @@
 
 namespace goINPUT\CAP\Endpoints\v1_0;
 
-use goINPUT\CAP\Endpoints\Endpoint;
 use Psr\Http\Message\ServerRequestInterface;
 
 class UndefinedEndpoint extends Endpoint

@@ -12,16 +12,20 @@
  *  Copyright (c) goINPUT IT Solutions 2022.
  */
 
-namespace goINPUT\CAP\Endpoints\v1_0;
+const BASEDIR = __DIR__;
 
-use Psr\Http\Message\ServerRequestInterface;
+$config = array(
+    'serverVersion' => '1.0',
+    'serverName'    => 'Hayward',
+    'apiVersion' => '1.0',
+    'externalIP' => '0.0.0.0',
+    'externalPort' => '8080',
+    'ACAO' => '*',
+    'ACAH' => '*',
+    
+    'logs' => array(
+        'accessLogs' => true,
+        'logToFile' => true
+    )
+);
 
-class DNSEndpoint extends Endpoint
-{
-    public function __construct(ServerRequestInterface $request)
-    {
-        parent::__construct($request);
-        
-        $this->appendResponseData(array("TestData" => "DNS"));
-    }
-}

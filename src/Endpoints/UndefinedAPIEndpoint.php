@@ -16,7 +16,7 @@ namespace goINPUT\CAP\Endpoints;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-class UndefinedAPIEndpoint extends Endpoint
+class UndefinedAPIEndpoint extends BasicEndpoint
 {
     public function __construct(ServerRequestInterface $request)
     {

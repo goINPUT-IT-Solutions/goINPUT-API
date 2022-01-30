@@ -12,16 +12,9 @@
  *  Copyright (c) goINPUT IT Solutions 2022.
  */
 
-namespace goINPUT\CAP\Endpoints\v1_0;
+namespace goINPUT\CAP;
 
-use Psr\Http\Message\ServerRequestInterface;
-
-class DNSEndpoint extends Endpoint
+class Logging
 {
-    public function __construct(ServerRequestInterface $request)
-    {
-        parent::__construct($request);
-        
-        $this->appendResponseData(array("TestData" => "DNS"));
-    }
+    
 }
